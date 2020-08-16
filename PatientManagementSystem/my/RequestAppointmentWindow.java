@@ -34,15 +34,15 @@ public class RequestAppointmentWindow extends javax.swing.JFrame {
     * Creates new form RequestAppointmentWindow
     */
    public RequestAppointmentWindow(String PatientUID) {
-      this.directory = new ListableDirectory.ListableTemplateBuilder().AddTopLevelFolder("users").Build();
       initComponents();
       this.request = new AppointmentRequest();
       this.request.setPatientUID(PatientUID);
       DateFromJTextField.setEnabled(false);
       DateToJTextField.setEnabled(false);
       SaveRequestJButton.setEnabled(false);
+      this.directory = new ListableDirectory.ListableTemplateBuilder().AddTopLevelFolder("users").Build();
       this.loadBehaviour = new LoadUsers();
-      this.filterBehaviour = new FilterByString();
+      this.filterBehaviour = new FilterByUID();
       this.AllDoctors = loadBehaviour.LoadAll(directory);
       this.AllDoctors = filterBehaviour.filterByString(AllDoctors, "D");
       DoctorsJList.setModel(AllDoctors);
@@ -90,9 +90,9 @@ public class RequestAppointmentWindow extends javax.swing.JFrame {
       });
 
       SaveRequestJButton.setText("Save");
-      SaveRequestJButton.addMouseListener(new java.awt.event.MouseAdapter() {
-         public void mouseClicked(java.awt.event.MouseEvent evt) {
-            SaveRequestJButtonMouseClicked(evt);
+      SaveRequestJButton.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            SaveRequestJButtonActionPerformed(evt);
          }
       });
 
@@ -152,19 +152,6 @@ public class RequestAppointmentWindow extends javax.swing.JFrame {
       pack();
    }// </editor-fold>//GEN-END:initComponents
 
-   private void SaveRequestJButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SaveRequestJButtonMouseClicked
-      boolean saveSuccess = request.saveAppointmentRequest();
-      if(saveSuccess == true)
-      {
-         JOptionPane.showMessageDialog(null, "Your request has been saved", "Request Sent", JOptionPane.INFORMATION_MESSAGE);
-         this.dispose();
-      }
-      else
-      {
-         JOptionPane.showMessageDialog(null, "Something went wrong. Please try again", "Error", JOptionPane.INFORMATION_MESSAGE);
-      }
-   }//GEN-LAST:event_SaveRequestJButtonMouseClicked
-
    private void DoctorsJListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_DoctorsJListValueChanged
       Doctor doctor = (Doctor)AllDoctors.get(DoctorsJList.getSelectedIndex());
       this.request.setDoctor(doctor.getUID());
@@ -206,6 +193,19 @@ public class RequestAppointmentWindow extends javax.swing.JFrame {
          SaveRequestJButton.setEnabled(false);
       }
    }//GEN-LAST:event_DateToJTextFieldCaretUpdate
+
+   private void SaveRequestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveRequestJButtonActionPerformed
+      boolean saveSuccess = request.saveAppointmentRequest();
+      if(saveSuccess == true)
+      {
+         JOptionPane.showMessageDialog(null, "Your request has been saved", "Request Sent", JOptionPane.INFORMATION_MESSAGE);
+         this.dispose();
+      }
+      else
+      {
+         JOptionPane.showMessageDialog(null, "Something went wrong. Please try again", "Error", JOptionPane.INFORMATION_MESSAGE);
+      }
+   }//GEN-LAST:event_SaveRequestJButtonActionPerformed
 
    /**
     * @param args the command line arguments

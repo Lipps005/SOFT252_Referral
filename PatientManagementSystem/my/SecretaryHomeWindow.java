@@ -8,6 +8,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
 import my.models.*;
 import my.models.userevents.Listable.FilterByString;
+import my.models.userevents.Listable.FilterByUID;
 import my.models.userevents.Listable.IFilterByDateTimeBehaviour;
 import my.models.userevents.Listable.IFilterByStringBehaviour;
 import my.models.userevents.Listable.ILoadAllBehaviour;
@@ -75,7 +76,7 @@ public class SecretaryHomeWindow extends javax.swing.JFrame implements SubFrameC
          
          this.directory = new ListableDirectory.ListableTemplateBuilder().AddTopLevelFolder("users").Build();
          this.loadBehaviour = new LoadUsers();
-         this.stringFilter = new FilterByString();
+         this.stringFilter = new FilterByUID();
          this.PatientsModel = loadBehaviour.LoadAll(directory);
          this.PatientsModel = stringFilter.filterByString(PatientsModel, "P");
          PatientsJList.setModel(PatientsModel);

@@ -24,9 +24,10 @@ public class Prescription implements Serializable, ListableByString{
    private int Quantity;
    private final UUID PrescriptionUID = java.util.UUID.randomUUID();
    
-    public UUID getUID()
+   @Override
+    public String getUID()
    {
-      return this.PrescriptionUID;
+      return this.PrescriptionUID.toString();
    }
       
    public Prescription()

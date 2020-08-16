@@ -384,7 +384,10 @@ public class Login extends javax.swing.JFrame {
 
    private void Register_Registerbtn_JButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Register_Registerbtn_JButtonActionPerformed
       this.patient.saveUser();
+      AccountActionRequest action = new AccountActionRequest(this.patient.getUID(), User.AccountStatus.ACTIVE);
+      action.saveAccountActionRequest();
       JOptionPane.showMessageDialog(null, "Thanks for registering. The Secretary will notify you when your account is active.", "User Request Sent", JOptionPane.INFORMATION_MESSAGE);
+      Register_RegisterUID_JLabel.setText(this.patient.getUID());
       this.patient = new Patient(User.UIDGenerator('P'));
       Register_FullName_JTextField.setText("");
       Register_Password_JTextField.setText("");

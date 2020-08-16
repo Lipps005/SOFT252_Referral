@@ -20,7 +20,7 @@ public class User implements Serializable, ListableByString {
 
    @Override
    public String getSearchString() {
-      return this.Name+this.UID;
+      return this.Name;//+this.UID;
    }
    
    
@@ -37,6 +37,11 @@ public class User implements Serializable, ListableByString {
           UID += rand.nextInt(9);
           File folder = new File("users");
           File[] listOfFiles = folder.listFiles();
+          if(listOfFiles.length == 0)
+          {
+             unique = true;
+             break;
+          }
           for(File file : listOfFiles)
           {
              unique = !UID.equals(file.getName());
@@ -143,6 +148,7 @@ public class User implements Serializable, ListableByString {
       }
    }
    
+   @Override
    public String getUID()
    {
       return this.UID;

@@ -16,6 +16,7 @@ import my.models.Doctor;
 import my.models.Patient;
 import my.models.User;
 import my.models.userevents.Listable.FilterByString;
+import my.models.userevents.Listable.FilterByUID;
 import my.models.userevents.Listable.FilterRemovePrecedingDate;
 import my.models.userevents.Listable.IFilterByDateTimeBehaviour;
 import my.models.userevents.Listable.IFilterByStringBehaviour;
@@ -85,7 +86,7 @@ public class DoctorHomeWindow extends javax.swing.JFrame implements SubFrameClos
          
          this.directory = new ListableDirectory.ListableTemplateBuilder().AddTopLevelFolder("users").Build();
          this.loadBehaviour = new LoadUsers();
-         this.stringFilter = new FilterByString();
+         this.stringFilter = new FilterByUID();
          this.PatientsModel = loadBehaviour.LoadAll(directory);
          this.PatientsModel = stringFilter.filterByString(PatientsModel, "P");
          PatientsJList.setModel(PatientsModel);

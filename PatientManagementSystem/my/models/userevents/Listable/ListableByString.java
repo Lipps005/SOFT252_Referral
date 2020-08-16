@@ -11,4 +11,5 @@ package my.models.userevents.Listable;
  */
 public interface ListableByString {
    public abstract String getSearchString();
+   public abstract String getUID();
 }

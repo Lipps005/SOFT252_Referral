@@ -101,8 +101,9 @@ public class Medicine implements Serializable, ListableByString{
       }
    }
    
-   public UUID getUID()
+   @Override
+    public String getUID()
    {
-      return this.MedicineUID;
+      return this.MedicineUID.toString();
    }
 }
