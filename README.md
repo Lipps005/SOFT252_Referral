@@ -7,3 +7,11 @@ Please go to https://drive.google.com/drive/folders/1r52vTYqnzVcc09xaGQL2pBKa_S8
 
 
 For this project, I inferred notifications to be a new event that a user should be able to see. For example, when a Patient has an outstanding prescription, this appears in a new list inside the Patients Home Window.
+
+
+Please note, that the newly created UID now shows as a label underneath the registration form. This UID will be overwritten if a new user is created, or if the program is closed. The easist way to retreive this is to look in the users/ folder. 
+
+Please note, closing a Users home window will exit the program.
+
+Please note, that although you can login as two users at once, changes, actions or events made by one user are not updated in another users window. Please close the user window and restart the program to see the changes. This does not apply to changes made within a users window, such as responding to requests, or adding new prescriptions to an appointment.   
+
