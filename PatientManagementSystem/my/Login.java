@@ -387,7 +387,7 @@ public class Login extends javax.swing.JFrame {
       AccountActionRequest action = new AccountActionRequest(this.patient.getUID(), User.AccountStatus.ACTIVE);
       action.saveAccountActionRequest();
       JOptionPane.showMessageDialog(null, "Thanks for registering. The Secretary will notify you when your account is active.", "User Request Sent", JOptionPane.INFORMATION_MESSAGE);
-      Register_RegisterUID_JLabel.setText(this.patient.getUID());
+      Register_RegisterUID_JLabel.setText("Here is your patient ID. Don't forget it! " + this.patient.getUID());
       this.patient = new Patient(User.UIDGenerator('P'));
       Register_FullName_JTextField.setText("");
       Register_Password_JTextField.setText("");
@@ -427,6 +427,8 @@ public class Login extends javax.swing.JFrame {
       /* Create and display the form */
       java.awt.EventQueue.invokeLater(new Runnable() {
          public void run() {
+            new File("users").mkdirs();
+            new File("medicines").mkdirs();
            /*Patient patient = new Patient("P103122");
            patient.updateAccountStatus(User.AccountStatus.ACTIVE);
            patient.setName("Samuel Lippett");

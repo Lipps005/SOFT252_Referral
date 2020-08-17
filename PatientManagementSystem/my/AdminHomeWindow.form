@@ -29,7 +29,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="516" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="522" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -79,7 +79,9 @@
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="RegisteredUser_UID_JTextField" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="Register_RegisterUID_JLabel" min="-2" pref="287" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -109,14 +111,19 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Register_TypeDoctor_JRadioBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Register_TypeSecretary_JRadioBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="Register_TypeDoctor_JRadioBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="Register_TypeSecretary_JRadioBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="Register_Registerbtn_JButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="Register_RegisterUID_JLabel" min="-2" pref="33" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="RegisteredUser_UID_JTextField" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="Register_Registerbtn_JButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                  <Component id="Register_RegisterUID_JLabel" min="-2" pref="33" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -215,6 +222,8 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Profession"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="RegisteredUser_UID_JTextField">
         </Component>
       </SubComponents>
     </Container>

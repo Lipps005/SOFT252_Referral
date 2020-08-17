@@ -32,6 +32,7 @@ public class AppointmentWindow extends javax.swing.JFrame implements SubFrameMod
       this.WindowAppointment = thisAppointment;
       this.behaviour = behaviour;
       this.behaviour.setPropertyRights(this);
+      this.Appointment_Treatment_JTextField.setText(WindowAppointment.getTreatmentNotes());
       this.App_Date_JLabel.setText(WindowAppointment.getAppointmentDate().toString());
       this.App_Time_JLabel.setText(WindowAppointment.getAppointmentTime().toString());
       this.DoctorNameJLabel.setText(WindowAppointment.getDoctorID());

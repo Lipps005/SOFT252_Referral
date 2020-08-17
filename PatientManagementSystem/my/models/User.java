@@ -35,10 +35,11 @@ public class User implements Serializable, ListableByString {
           UID += rand.nextInt(9);
           UID += rand.nextInt(9);
           UID += rand.nextInt(9);
-          File folder = new File("users");
+          File folder = new File("users/");
           File[] listOfFiles = folder.listFiles();
-          if(listOfFiles.length == 0)
+          if(listOfFiles == null || listOfFiles.length == 0)
           {
+             System.console().printf("No files");
              unique = true;
              break;
           }
@@ -52,7 +53,7 @@ public class User implements Serializable, ListableByString {
    }
    
    
-   static public enum AccountStatus {
+   public static enum AccountStatus {
     PENDING,
     ACTIVE,
     DELETED

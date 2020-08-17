@@ -69,6 +69,7 @@ public class AdminHomeWindow extends javax.swing.JFrame {
       Register_TypeDoctor_JRadioBtn = new javax.swing.JRadioButton();
       Register_TypeSecretary_JRadioBtn = new javax.swing.JRadioButton();
       jLabel6 = new javax.swing.JLabel();
+      RegisteredUser_UID_JTextField = new javax.swing.JLabel();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -151,7 +152,9 @@ public class AdminHomeWindow extends javax.swing.JFrame {
                         .addComponent(Register_Password_JTextField)
                         .addComponent(Register_FullName_JTextField))))
                .addGroup(jPanel2Layout.createSequentialGroup()
-                  .addGap(22, 22, 22)
+                  .addContainerGap()
+                  .addComponent(RegisteredUser_UID_JTextField)
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                   .addComponent(Register_RegisterUID_JLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
                .addGroup(jPanel2Layout.createSequentialGroup()
                   .addGap(96, 96, 96)
@@ -176,13 +179,16 @@ public class AdminHomeWindow extends javax.swing.JFrame {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel6)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-               .addComponent(Register_TypeDoctor_JRadioBtn)
-               .addComponent(Register_TypeSecretary_JRadioBtn))
-            .addGap(18, 18, 18)
-            .addComponent(Register_Registerbtn_JButton)
-            .addGap(27, 27, 27)
-            .addComponent(Register_RegisterUID_JLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+               .addGroup(jPanel2Layout.createSequentialGroup()
+                  .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                     .addComponent(Register_TypeDoctor_JRadioBtn)
+                     .addComponent(Register_TypeSecretary_JRadioBtn))
+                  .addGap(18, 18, 18)
+                  .addComponent(Register_Registerbtn_JButton)
+                  .addGap(27, 27, 27)
+                  .addComponent(Register_RegisterUID_JLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+               .addComponent(RegisteredUser_UID_JTextField))
             .addContainerGap())
       );
 
@@ -192,7 +198,7 @@ public class AdminHomeWindow extends javax.swing.JFrame {
          layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(layout.createSequentialGroup()
             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(0, 516, Short.MAX_VALUE))
+            .addGap(0, 522, Short.MAX_VALUE))
       );
       layout.setVerticalGroup(
          layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -260,6 +266,7 @@ public class AdminHomeWindow extends javax.swing.JFrame {
       newEmployee.updateAccountStatus(User.AccountStatus.ACTIVE);
       newEmployee.saveUser();
       JOptionPane.showMessageDialog(null, "The new employee has been created.", "New Employee Created", JOptionPane.INFORMATION_MESSAGE);
+      RegisteredUser_UID_JTextField.setText("Here is the employees ID. Don't forget it! " + newEmployee.getUID());
       Register_FullName_JTextField.setText("");
       Register_Password_JTextField.setText("");
       Register_Address_JTextArea.setText("");
@@ -315,6 +322,7 @@ public class AdminHomeWindow extends javax.swing.JFrame {
    private javax.swing.JButton Register_Registerbtn_JButton;
    private javax.swing.JRadioButton Register_TypeDoctor_JRadioBtn;
    private javax.swing.JRadioButton Register_TypeSecretary_JRadioBtn;
+   private javax.swing.JLabel RegisteredUser_UID_JTextField;
    private javax.swing.ButtonGroup buttonGroup1;
    private javax.swing.JLabel jLabel3;
    private javax.swing.JLabel jLabel4;

@@ -56,7 +56,12 @@ public class Appointment extends UserEvent implements Serializable, ListableByDa
    {
       return this.AppointmentUID;
    }
-      
+   
+   public String getTreatmentNotes()
+   {
+      return this.TreatmentNotes;
+   }
+   
    public static DefaultListModel getAllAppointments(String UID) 
    {
       DefaultListModel UpcomingAppointments = new DefaultListModel();
