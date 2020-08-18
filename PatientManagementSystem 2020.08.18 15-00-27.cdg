@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="PatientManagementSystem">
+  <ClassDiagramComponents>
+    <Class name="AccountActionWindow" package="my" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="actionRequest" type="AccountActionRequest" visibility="private"/>
+        <Field name="patient" type="Patient" visibility="private"/>
+        <Field name="secretary" type="Secretary" visibility="private"/>
+        <Field name="listener" type="SubFrameCloseListener" visibility="package"/>
+        <Field name="ActiveJRadioButton" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="ConfirmationJTextBox" type="javax.swing.JCheckBox" visibility="private"/>
+        <Field name="DeletedJRadioButton" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="PendingJRadioButton" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="buttonGroup1" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="saveChangesJButton" type="javax.swing.JButton" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="AccountActionRequest" name="actionRequest"/>
+          <Argument type="Secretary" name="secretary"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="SubFrameCloseListener" returnType="void" visibility="public">
+          <Argument type="SubFrameCloseListener" name="listener"/>
+        </Method>
+        <Method name="saveChangesJButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="ConfirmationJTextBoxItemStateChanged" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ItemEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AdminHomeWindow" package="my" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="WindowAdmin" type="Admin" visibility="private" isFinal="true"/>
+        <Field name="Register_Address_JTextArea" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="Register_FullName_JTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Register_Password_JTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Register_RegisterUID_JLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="Register_Registerbtn_JButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Register_TypeDoctor_JRadioBtn" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="Register_TypeSecretary_JRadioBtn" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="RegisteredUser_UID_JTextField" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="buttonGroup1" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="UID"/>
+          <Argument type="String" name="Password"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUserStatus" returnType="boolean" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="Register_FullName_JTextFieldCaretUpdate" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.CaretEvent" name="evt"/>
+        </Method>
+        <Method name="Register_Password_JTextFieldCaretUpdate" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.CaretEvent" name="evt"/>
+        </Method>
+        <Method name="Register_Address_JTextAreaCaretUpdate" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.CaretEvent" name="evt"/>
+        </Method>
+        <Method name="Register_Registerbtn_JButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Register_TypeDoctor_JRadioBtnStateChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ChangeEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AppointmentWindow" package="my" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="WindowAppointment" type="Appointment" visibility="private"/>
+        <Field name="behaviour" type="IEventPropertiesBehaviour" visibility="private"/>
+        <Field name="listener" type="SubFrameCloseListener" visibility="package"/>
+        <Field name="App_Date_JLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="App_DoctorName_JLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="App_PatientName_JLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="App_Save_JButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="App_Time_JLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="AppointmentPrescriptionsJList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="Appointment_DoctorPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="Appointment_InfoPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="Appointment_Treatment_JTextField" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="DoctorNameJLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="PatientNameJLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="PrescriptionAddJButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jToolBar1" type="javax.swing.JToolBar" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Appointment" name="thisAppointment"/>
+          <Argument type="IEventPropertiesBehaviour" name="behaviour"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setTreatmentVisibility" returnType="void" visibility="public">
+          <Argument type="boolean" name="visibilityRight"/>
+        </Method>
+        <Method name="setTreatmentEditability" returnType="void" visibility="public">
+          <Argument type="boolean" name="visibilityRight"/>
+        </Method>
+        <Method name="setSaveButtonEnabled" returnType="void" visibility="public">
+          <Argument type="boolean" name="visibilityRight"/>
+        </Method>
+        <Method name="setPrescriptionAddButtonEnabled" returnType="void" visibility="public">
+          <Argument type="boolean" name="visibilityRight"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="Appointment_Treatment_JTextFieldCaretUpdate" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.CaretEvent" name="evt"/>
+        </Method>
+        <Method name="PrescriptionAddJButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="App_Save_JButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="SubFrameCloseListener" returnType="void" visibility="package">
+          <Argument type="DoctorHomeWindow" name="subFrameCloseListener"/>
+        </Method>
+        <Method name="onSubFrameNewModel" returnType="void" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CreateAppointmentWindow" package="my" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="request" type="AppointmentRequest" visibility="private" isFinal="true"/>
+        <Field name="appointment" type="Appointment" visibility="private"/>
+        <Field name="listener" type="SubFrameCloseListener" visibility="package"/>
+        <Field name="secretary" type="Secretary" visibility="private"/>
+        <Field name="ReservedAppointments" type="DefaultListModel" visibility="private"/>
+        <Field name="directory" type="ListableDirectory" visibility="private"/>
+        <Field name="loadBehaviour" type="ILoadAllBehaviour" visibility="private"/>
+        <Field name="dateTimeFilter" type="IFilterByDateTimeBehaviour" visibility="private"/>
+        <Field name="AppointmentAvailableIndicator" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="CreateAppointmentDoctorNameJLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="DateFromJLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="DateToJLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="DoctorNameJLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="HourTimeJComboBox" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="MinuteTimeJComboBox" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="NewAppointmentDateJTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="PatientNameJLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="PatientNameJLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="SaveAppointmentJButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="TakenAppointmentsJList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="AppointmentRequest" name="request"/>
+          <Argument type="Secretary" name="secretary"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="MinuteTimeJComboBoxActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="SaveAppointmentJButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="NewAppointmentDateJTextFieldCaretUpdate" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.CaretEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="SubFrameCloseListener" returnType="void" visibility="public">
+          <Argument type="SubFrameCloseListener" name="listener"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DispensePrescription" package="my" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="patient" type="Patient" visibility="private" isFinal="true"/>
+        <Field name="directory" type="ListableDirectory" visibility="private"/>
+        <Field name="PendingPrescriptionsModel" type="DefaultListModel" visibility="private"/>
+        <Field name="loadBehaviour" type="ILoadAllBehaviour" visibility="private"/>
+        <Field name="listener" type="SubFrameCloseListener" visibility="private"/>
+        <Field name="DispensePrescriptionJButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="PatientAddressJTextField" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="PatientIDJTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="PatientNameJTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="PendingPrescriptionsJList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Patient" name="patient"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="PendingPrescriptionsJListValueChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ListSelectionEvent" name="evt"/>
+        </Method>
+        <Method name="DispensePrescriptionJButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="formWindowClosing" returnType="void" visibility="private">
+          <Argument type="java.awt.event.WindowEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="SubFrameCloseListener" returnType="void" visibility="package">
+          <Argument type="SubFrameCloseListener" name="listener"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DoctorHomeWindow" package="my" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="WindowDoctor" type="Doctor" visibility="private" isFinal="true"/>
+        <Field name="directory" type="ListableDirectory" visibility="private"/>
+        <Field name="AppointmentsTodayModel" type="DefaultListModel" visibility="private"/>
+        <Field name="dateTimeFilter" type="IFilterByDateTimeBehaviour" visibility="private"/>
+        <Field name="PatientsModel" type="DefaultListModel" visibility="private"/>
+        <Field name="loadBehaviour" type="ILoadAllBehaviour" visibility="private"/>
+        <Field name="stringFilter" type="IFilterByStringBehaviour" visibility="private"/>
+        <Field name="AppointmentsTodayJPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="DoctorApointmentsTodayJList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="DoctorUpcomingAppointmentsJPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="PatientNameJTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="PatientsJList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane5" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="UID"/>
+          <Argument type="String" name="Password"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUserStatus" returnType="boolean" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="DoctorApointmentsTodayJListValueChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ListSelectionEvent" name="evt"/>
+        </Method>
+        <Method name="PatientsJListValueChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ListSelectionEvent" name="evt"/>
+        </Method>
+        <Method name="PatientNameJTextFieldCaretUpdate" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.CaretEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="onSubFrameClose" returnType="//on appointment window close
+void" visibility="public">
+          <Argument type="JFrame" name="frame"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Login" package="my" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="patient" type="Patient" visibility="private"/>
+        <Field name="Login_LoginError_JLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="Login_Loginbtn_JButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="Login_Password_TextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Login_UID_TextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Register_Address_JTextArea" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="Register_FullName_JTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Register_GenderFemale_JRadioBtn" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="Register_GenderMale_JRadioBtn" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="Register_Password_JTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Register_RegisterUID_JLabel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="Register_Registerbtn_JButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buttonGroup1" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="Login_Loginbtn_JButtonMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="Register_FullName_JTextFieldCaretUpdate" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.CaretEvent" name="evt"/>
+        </Method>
+        <Method name="Register_Password_JTextFieldCaretUpdate" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.CaretEvent" name="evt"/>
+        </Method>
+        <Method name="Register_Address_JTextAreaCaretUpdate" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.CaretEvent" name="evt"/>
+        </Method>
+        <Method name="Register_GenderFemale_JRadioBtnStateChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ChangeEvent" name="evt"/>
+        </Method>
+        <Method name="Register_Registerbtn_JButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MedicineWindow" package="my" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="listener" type="SubFrameModelAddListener" visibility="private"/>
+        <Field name="medicine" type="Medicine" visibility="private"/>
+        <Field name="AvailableStockJTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="DescriptionJTextArea" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="MedicineNameJTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="OnOrderCheckBox" type="javax.swing.JCheckBox" visibility="private"/>
+        <Field name="SaveChangesJButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Medicine" name="medicine"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="AvailableStockJTextFieldCaretUpdate" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.CaretEvent" name="evt"/>
+        </Method>
+        <Method name="SaveChangesJButtonMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="SubFrameModelAddListener" returnType="void" visibility="public">
+          <Argument type="SubFrameModelAddListener" name="listener"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AccountActionRequest" package="my.models" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="PatientUID" type="String" visibility="private"/>
+        <Field name="accountUpdateStatus" type="AccountStatus" visibility="private"/>
+        <Field name="AccountActionUID" type="UUID" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="PatientUID"/>
+          <Argument type="AccountStatus" name="updateTo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="saveAccountActionRequest" returnType="boolean" visibility="public"/>
+        <Method name="getPatientUID" returnType="String" visibility="public"/>
+        <Method name="getUID" returnType="UUID" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Admin" package="my.models" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="UID"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Appointment" package="my.models" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="AppointmentPatient" type="String" visibility="private"/>
+        <Field name="AppointmentDoctor" type="String" visibility="private"/>
+        <Field name="AppointmentDate" type="LocalDate" visibility="private" isFinal="true"/>
+        <Field name="AppointmentTime" type="LocalTime" visibility="private" isFinal="true"/>
+        <Field name="AppointmentUID" type="UUID" visibility="private" isFinal="true"/>
+        <Field name="TreatmentNotes" type="String" visibility="private"/>
+        <Field name="PrescribedMedicines" type="DefaultListModel" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="LocalDate" name="AppointmentDate"/>
+          <Argument type="LocalTime" name="AppointmentTime"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getAppointmentDate" returnType="LocalDate" visibility="public"/>
+        <Method name="getAppointmentTime" returnType="LocalTime" visibility="public"/>
+        <Method name="getDoctorID" returnType="String" visibility="public"/>
+        <Method name="getPatientID" returnType="String" visibility="public"/>
+        <Method name="getUID" returnType="UUID" visibility="public"/>
+        <Method name="getTreatmentNotes" returnType="String" visibility="public"/>
+        <Method name="getAllAppointments" returnType="DefaultListModel" visibility="public" isStatic="true">
+          <Argument type="String" name="UID"/>
+        </Method>
+        <Method name="saveAppointment" returnType="void" visibility="public">
+          <Argument type="String" name="UID"/>
+        </Method>
+        <Method name="setPatient" returnType="void" visibility="public">
+          <Argument type="String" name="UID"/>
+        </Method>
+        <Method name="setDoctor" returnType="void" visibility="public">
+          <Argument type="String" name="UID"/>
+        </Method>
+        <Method name="getSearchDateTime" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setTreatmentNotes" returnType="void" visibility="public">
+          <Argument type="String" name="notes"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AppointmentRequest" package="my.models" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="PatientUID" type="String" visibility="private"/>
+        <Field name="DoctorUID" type="String" visibility="private"/>
+        <Field name="DateFrom" type="LocalDate" visibility="private"/>
+        <Field name="DateTo" type="LocalDate" visibility="private"/>
+        <Field name="AccountActionUID" type="UUID" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getUID" returnType="UUID" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="setPatientUID" returnType="void" visibility="public">
+          <Argument type="String" name="PatientUID"/>
+        </Method>
+        <Method name="getPatientUID" returnType="String" visibility="public"/>
+        <Method name="setDateFrom" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="DateFrom"/>
+        </Method>
+        <Method name="getDateFrom" returnType="LocalDate" visibility="public"/>
+        <Method name="setDateTo" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="DateTo"/>
+        </Method>
+        <Method name="getDateTo" returnType="LocalDate" visibility="public"/>
+        <Method name="setDoctor" returnType="void" visibility="public">
+          <Argument type="String" name="DoctorUID"/>
+        </Method>
+        <Method name="getDoctorUID" returnType="String" visibility="public"/>
+        <Method name="saveAppointmentRequest" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Doctor" package="my.models" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="UID"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Medicine" package="my.models" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields>
+        <Field name="MedicineName" type="String" visibility="private"/>
+        <Field name="StockUnits" type="int" visibility="private"/>
+        <Field name="OnOrder" type="boolean" visibility="private"/>
+        <Field name="Description" type="String" visibility="private"/>
+        <Field name="MedicineUID" type="UUID" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="medicineName"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="dispenseStock" returnType="boolean" visibility="public">
+          <Argument type="int" name="Amount"/>
+        </Method>
+        <Method name="putOnOrder" returnType="void" visibility="public">
+          <Argument type="boolean" name="orderChange"/>
+        </Method>
+        <Method name="isOnOrder" returnType="boolean" visibility="public"/>
+        <Method name="addStock" returnType="void" visibility="public">
+          <Argument type="int" name="stocktoadd"/>
+        </Method>
+        <Method name="StockLeft" returnType="int" visibility="public"/>
+        <Method name="getSearchString" returnType="String" visibility="public"/>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="setDescription" returnType="void" visibility="public">
+          <Argument type="String" name="description"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="saveMedicine" returnType="void" visibility="public"/>
+        <Method name="getUID" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Patient" package="my.models" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="UID"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Prescription" package="my.models" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields>
+        <Field name="Dose" type="String" visibility="private"/>
+        <Field name="Medicine" type="String" visibility="private"/>
+        <Field name="Quantity" type="int" visibility="private"/>
+        <Field name="PrescriptionUID" type="UUID" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getUID" returnType="String" visibility="public"/>
+        <Method name="getSearchString" returnType="String" visibility="public"/>
+        <Method name="setDose" returnType="void" visibility="public">
+          <Argument type="String" name="dose"/>
+        </Method>
+        <Method name="setPrescriptionQuantity" returnType="void" visibility="public">
+          <Argument type="int" name="quantity"/>
+        </Method>
+        <Method name="setMedicine" returnType="void" visibility="public">
+          <Argument type="String" name="Medicine"/>
+        </Method>
+        <Method name="getRequiredStock" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="savePrescription" returnType="void" visibility="public">
+          <Argument type="String" name="UID"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Secretary" package="my.models" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="UID"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="saveUser" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="User" package="my.models" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields>
+        <Field name="UID" type="String" visibility="protected"/>
+        <Field name="Password" type="String" visibility="protected"/>
+        <Field name="Name" type="String" visibility="protected"/>
+        <Field name="Address" type="String" visibility="protected"/>
+        <Field name="Gender" type="String" visibility="protected"/>
+        <Field name="status" type="AccountStatus" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getSearchString" returnType="String" visibility="public"/>
+        <Method name="UIDGenerator" returnType="String" visibility="public" isStatic="true">
+          <Argument type="char" name="userType"/>
+        </Method>
+        <Method name="setGender" returnType="void" visibility="public">
+          <Argument type="String" name="gender"/>
+        </Method>
+        <Method name="updateAccountStatus" returnType="void" visibility="public">
+          <Argument type="AccountStatus" name="status"/>
+        </Method>
+        <Method name="getAccountStatus" returnType="AccountStatus" visibility="public"/>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="Password"/>
+        </Method>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="Name"/>
+        </Method>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="Address"/>
+        </Method>
+        <Method name="verifyPassword" returnType="boolean" visibility="public">
+          <Argument type="String" name="passwordIn"/>
+        </Method>
+        <Method name="loadUser" returnType="Object" visibility="public" isStatic="true">
+          <Argument type="String" name="UID"/>
+        </Method>
+        <Method name="saveUser" returnType="void" visibility="public"/>
+        <Method name="getUID" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="UserEvent" package="my.models" visibility="public" xPosition="620.0" yPosition="820.0">
+      <Fields>
+        <Field name="Directory" type="String" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Interface name="IEventPropertiesBehaviour" package="my.models.userevents" visibility="public" xPosition="920.0" yPosition="820.0">
+      <Methods>
+        <Method name="setPropertyRights" returnType="void" visibility="public">
+          <Argument type="AppointmentWindow" name="UEvent"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class name="FilterByString" package="my.models.userevents.Listable" visibility="public" xPosition="1220.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="filterByString" returnType="DefaultListModel" visibility="public">
+          <Argument type="DefaultListModel" name="model"/>
+          <Argument type="String" name="filterString"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FilterByUID" package="my.models.userevents.Listable" visibility="public" xPosition="1520.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="filterByString" returnType="DefaultListModel" visibility="public">
+          <Argument type="DefaultListModel" name="model"/>
+          <Argument type="String" name="filterString"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FilterIsDate" package="my.models.userevents.Listable" visibility="public" xPosition="1820.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="filterByDateTime" returnType="DefaultListModel" visibility="public">
+          <Argument type="DefaultListModel" name="model"/>
+          <Argument type="LocalDateTime" name="dateTime"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FilterIsTime" package="my.models.userevents.Listable" visibility="public" xPosition="2120.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="filterByDateTime" returnType="DefaultListModel" visibility="public">
+          <Argument type="DefaultListModel" name="model"/>
+          <Argument type="LocalDateTime" name="dateTime"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FilterIsToday" package="my.models.userevents.Listable" visibility="public" xPosition="20.0" yPosition="1220.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="filterByDateTime" returnType="DefaultListModel" visibility="public">
+          <Argument type="DefaultListModel" name="model"/>
+          <Argument type="LocalDateTime" name="dateTime"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FilterNameIsString" package="my.models.userevents.Listable" visibility="public" xPosition="320.0" yPosition="1220.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="filterByString" returnType="DefaultListModel" visibility="public">
+          <Argument type="DefaultListModel" name="model"/>
+          <Argument type="String" name="filterString"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FilterRemovePrecedingDate" package="my.models.userevents.Listable" visibility="public" xPosition="620.0" yPosition="1220.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="filterByDateTime" returnType="DefaultListModel" visibility="public">
+          <Argument type="DefaultListModel" name="model"/>
+          <Argument type="LocalDateTime" name="dateTime"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FilterRemoveSucceedingDate" package="my.models.userevents.Listable" visibility="public" xPosition="920.0" yPosition="1220.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="filterByDateTime" returnType="DefaultListModel" visibility="public">
+          <Argument type="DefaultListModel" name="model"/>
+          <Argument type="LocalDateTime" name="dateTime"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="IFilterByDateTimeBehaviour" package="my.models.userevents.Listable" visibility="public" xPosition="1220.0" yPosition="1220.0">
+      <Methods>
+        <Method name="filterByDateTime" returnType="DefaultListModel" visibility="public">
+          <Argument type="DefaultListModel" name="model"/>
+          <Argument type="LocalDateTime" name="dateTime"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="IFilterByStringBehaviour" package="my.models.userevents.Listable" visibility="public" xPosition="1520.0" yPosition="1220.0">
+      <Methods>
+        <Method name="filterByString" returnType="DefaultListModel" visibility="public">
+          <Argument type="DefaultListModel" name="model"/>
+          <Argument type="String" name="filterString"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="ILoadAllBehaviour" package="my.models.userevents.Listable" visibility="public" xPosition="1820.0" yPosition="1220.0">
+      <Methods>
+        <Method name="LoadAll" returnType="DefaultListModel" visibility="public">
+          <Argument type="ListableDirectory" name="directory"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="ListableByDateTime" package="my.models.userevents.Listable" visibility="public" xPosition="2120.0" yPosition="1220.0">
+      <Methods>
+        <Method name="getSearchDateTime" returnType="LocalDateTime" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Interface>
+    <Interface name="ListableByString" package="my.models.userevents.Listable" visibility="public" xPosition="20.0" yPosition="1620.0">
+      <Methods>
+        <Method name="getSearchString" returnType="String" visibility="public" isAbstract="true"/>
+        <Method name="getUID" returnType="String" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Interface>
+    <Class name="ListableDirectory" package="my.models.userevents.Listable" visibility="public" xPosition="320.0" yPosition="1620.0">
+      <Fields>
+        <Field name="ToplevelFolder" type="String" visibility="private"/>
+        <Field name="FolderUID" type="String" visibility="private"/>
+        <Field name="SubFolder" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private">
+          <Argument type="ListableTemplateBuilder" name="builder"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="GetDirectory" returnType="String" visibility="public"/>
+        <Method name="setTopLevelFolder" returnType="void" visibility="public">
+          <Argument type="String" name="toplevel"/>
+        </Method>
+        <Method name="setFolderUID" returnType="void" visibility="public">
+          <Argument type="String" name="folderUID"/>
+        </Method>
+        <Method name="setSubFolder" returnType="void" visibility="public">
+          <Argument type="String" name="subfolder"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LoadObjectsFromFile" package="my.models.userevents.Listable" visibility="public" xPosition="620.0" yPosition="1620.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="LoadAll" returnType="DefaultListModel" visibility="public">
+          <Argument type="ListableDirectory" name="directory"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LoadUsers" package="my.models.userevents.Listable" visibility="public" xPosition="920.0" yPosition="1620.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="LoadAll" returnType="DefaultListModel" visibility="public">
+          <Argument type="ListableDirectory" name="directory"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SetPropertiesAsDoctor" package="my.models.userevents" visibility="public" xPosition="1220.0" yPosition="1620.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="setPropertyRights" returnType="void" visibility="public">
+          <Argument type="AppointmentWindow" name="UEvent"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SetPropertiesAsPatient" package="my.models.userevents" visibility="public" xPosition="1520.0" yPosition="1620.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="setPropertyRights" returnType="void" visibility="public">
+          <Argument type="AppointmentWindow" name="UEvent"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SetPropertiesAsSectretary" package="my.models.userevents" visibility="public" xPosition="1820.0" yPosition="1620.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="setPropertyRights" returnType="void" visibility="public">
+          <Argument type="AppointmentWindow" name="UEvent"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="SubFrameCloseListener" package="my.models.userevents" visibility="public" xPosition="2120.0" yPosition="1620.0">
+      <Methods>
+        <Method name="onSubFrameClose" returnType="void" visibility="public">
+          <Argument type="JFrame" name="frame"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="SubFrameModelAddListener" package="my.models.userevents" visibility="public" xPosition="20.0" yPosition="2020.0">
+      <Methods>
+        <Method name="onSubFrameNewModel" returnType="void" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class name="NewPrescriptionWindow" package="my" visibility="public" xPosition="320.0" yPosition="2020.0">
+      <Fields>
+        <Field name="listener" type="SubFrameModelAddListener" visibility="private"/>
+        <Field name="allMedicinesModel" type="DefaultListModel" visibility="private"/>
+        <Field name="prescription" type="Prescription" visibility="private"/>
+        <Field name="stringFilter" type="FilterByString" visibility="private"/>
+        <Field name="directory" type="ListableDirectory" visibility="private"/>
+        <Field name="loadBehaviour" type="ILoadAllBehaviour" visibility="private"/>
+        <Field name="AllMedicinesJList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="CreateMedicineJButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="MedicinePrescriptionAmountJSpinner" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="MedicineSearchJTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="PrescriptionDoseJTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="SavePrescriptionJButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="SavePrescriptionJButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="MedicineSearchJTextFieldCaretUpdate" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.CaretEvent" name="evt"/>
+        </Method>
+        <Method name="CreateMedicineJButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="MedicinePrescriptionAmountJSpinnerStateChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ChangeEvent" name="evt"/>
+        </Method>
+        <Method name="AllMedicinesJListValueChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ListSelectionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="SubFrameModelAddListener" returnType="void" visibility="public">
+          <Argument type="SubFrameModelAddListener" name="listener"/>
+        </Method>
+        <Method name="onSubFrameNewModel" returnType="/*called when a new medicine is created 
+   (or more specifically, when a medicine is saved.
+   But since only clicking the create new medicine button
+   raises a medicine window, and only a medicine window
+   //will trigger this event, we can assume that this
+   //event means a new medicine has been created
+   */
+void" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PatientHomeWindow" package="my" visibility="public" xPosition="620.0" yPosition="2020.0">
+      <Fields>
+        <Field name="WindowPatient" type="Patient" visibility="private" isFinal="true"/>
+        <Field name="UpcomingAppointmentsModel" type="DefaultListModel" visibility="private"/>
+        <Field name="PendingPrescriptionsModel" type="DefaultListModel" visibility="private"/>
+        <Field name="PastAppointmentsModel" type="DefaultListModel" visibility="private"/>
+        <Field name="directory" type="ListableDirectory" visibility="private"/>
+        <Field name="loadBehaviour" type="ILoadAllBehaviour" visibility="private"/>
+        <Field name="dateTimeFilter" type="IFilterByDateTimeBehaviour" visibility="private"/>
+        <Field name="PastAppointmentsJList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="PatientHistoryJPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="PendingPrescriptionsJList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="PendingPrescriptionsJPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="RequestAppointmentJButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="UpcomingAppointmentsJList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="UpcomingAppointmentsJPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="UID"/>
+          <Argument type="String" name="Password"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUserStatus" returnType="boolean" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="RequestAppointmentJButtonMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="PastAppointmentsJListValueChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ListSelectionEvent" name="evt"/>
+        </Method>
+        <Method name="UpcomingAppointmentsJListValueChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ListSelectionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RequestAppointmentWindow" package="my" visibility="public" xPosition="920.0" yPosition="2020.0">
+      <Fields>
+        <Field name="request" type="AppointmentRequest" visibility="private" isFinal="true"/>
+        <Field name="AllDoctors" type="DefaultListModel" visibility="private"/>
+        <Field name="directory" type="ListableDirectory" visibility="private" isFinal="true"/>
+        <Field name="loadBehaviour" type="ILoadAllBehaviour" visibility="private"/>
+        <Field name="filterBehaviour" type="IFilterByStringBehaviour" visibility="private"/>
+        <Field name="DateFromJTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="DateToJTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="DoctorsJList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="SaveRequestJButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="PatientUID"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="DoctorsJListValueChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ListSelectionEvent" name="evt"/>
+        </Method>
+        <Method name="DateFromJTextFieldCaretUpdate" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.CaretEvent" name="evt"/>
+        </Method>
+        <Method name="DateToJTextFieldCaretUpdate" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.CaretEvent" name="evt"/>
+        </Method>
+        <Method name="SaveRequestJButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SecretaryHomeWindow" package="my" visibility="public" xPosition="1220.0" yPosition="2020.0">
+      <Fields>
+        <Field name="WindowSecretary" type="Secretary" visibility="private" isFinal="true"/>
+        <Field name="directory" type="ListableDirectory" visibility="private"/>
+        <Field name="loadBehaviour" type="ILoadAllBehaviour" visibility="private"/>
+        <Field name="dateTimeFilter" type="IFilterByDateTimeBehaviour" visibility="private"/>
+        <Field name="stringFilter" type="IFilterByStringBehaviour" visibility="private"/>
+        <Field name="AccountActionModel" type="DefaultListModel" visibility="private"/>
+        <Field name="MedicineActionModel" type="DefaultListModel" visibility="private"/>
+        <Field name="AppointmentRequestsModel" type="DefaultListModel" visibility="private"/>
+        <Field name="MedicinesModel" type="DefaultListModel" visibility="private"/>
+        <Field name="PatientsModel" type="DefaultListModel" visibility="private"/>
+        <Field name="AccountActionRequests" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="AccountActionRequestsJList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="AppointmentRequestsJList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="AppointmentRequestsJPanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="MedicineNameJTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="MedicinesJList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="PatientNameJTextField" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="PatientsJList" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane4" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane5" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="UID"/>
+          <Argument type="String" name="Password"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUserStatus" returnType="boolean" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="PatientsJListValueChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ListSelectionEvent" name="evt"/>
+        </Method>
+        <Method name="MedicineNameJTextFieldCaretUpdate" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.CaretEvent" name="evt"/>
+        </Method>
+        <Method name="PatientNameJTextFieldCaretUpdate" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.CaretEvent" name="evt"/>
+        </Method>
+        <Method name="MedicinesJListValueChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ListSelectionEvent" name="evt"/>
+        </Method>
+        <Method name="AccountActionRequestsJListValueChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ListSelectionEvent" name="evt"/>
+        </Method>
+        <Method name="AppointmentRequestsJListValueChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ListSelectionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="onSubFrameClose" returnType="void" visibility="public">
+          <Argument type="JFrame" name="childFrame"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="patient" source="my.AccountActionWindow" target="my.models.Patient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="my.DispensePrescription" target="my.models.userevents.SubFrameCloseListener" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="my.MedicineWindow" target="my.models.userevents.SubFrameModelAddListener" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="directory" source="my.CreateAppointmentWindow" target="my.models.userevents.Listable.ListableDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ListableDirectory"/>
+    <IsRelation name="is" source="my.models.Patient" target="my.models.User"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.userevents.Listable.FilterRemoveSucceedingDate" target="my.models.userevents.Listable.IFilterByDateTimeBehaviour"/>
+    <HasRelation name="listener" source="my.DispensePrescription" target="my.models.userevents.SubFrameCloseListener" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="SubFrameCloseListener"/>
+    <HasRelation name="loadBehaviour" source="my.NewPrescriptionWindow" target="my.models.userevents.Listable.ILoadAllBehaviour" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="stringFilter" source="my.DoctorHomeWindow" target="my.models.userevents.Listable.IFilterByStringBehaviour" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="secretary" source="my.AccountActionWindow" target="my.models.Secretary" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="WindowAppointment" source="my.AppointmentWindow" target="my.models.Appointment" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="request" source="my.CreateAppointmentWindow" target="my.models.AppointmentRequest" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="loadBehaviour" source="my.PatientHomeWindow" target="my.models.userevents.Listable.ILoadAllBehaviour" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="WindowSecretary" source="my.SecretaryHomeWindow" target="my.models.Secretary" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="my.CreateAppointmentWindow" target="my.models.userevents.SubFrameCloseListener" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.userevents.Listable.FilterNameIsString" target="my.models.userevents.Listable.IFilterByStringBehaviour"/>
+    <HasRelation name="dateTimeFilter" source="my.PatientHomeWindow" target="my.models.userevents.Listable.IFilterByDateTimeBehaviour" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="stringFilter" source="my.NewPrescriptionWindow" target="my.models.userevents.Listable.FilterByString" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="stringFilter" source="my.SecretaryHomeWindow" target="my.models.userevents.Listable.IFilterByStringBehaviour" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="prescription" source="my.NewPrescriptionWindow" target="my.models.Prescription" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.userevents.Listable.FilterByString" target="my.models.userevents.Listable.IFilterByStringBehaviour"/>
+    <HasRelation name="directory" source="my.RequestAppointmentWindow" target="my.models.userevents.Listable.ListableDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ListableDirectory"/>
+    <HasRelation name="WindowDoctor" source="my.DoctorHomeWindow" target="my.models.Doctor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="my.models.Secretary" target="my.models.User"/>
+    <HasRelation name="directory" source="my.SecretaryHomeWindow" target="my.models.userevents.Listable.ListableDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ListableDirectory"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.Medicine" target="my.models.userevents.Listable.ListableByString"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.Appointment" target="my.models.userevents.Listable.ListableByDateTime"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.Prescription" target="my.models.userevents.Listable.ListableByString"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.userevents.Listable.FilterByUID" target="my.models.userevents.Listable.IFilterByStringBehaviour"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.userevents.SetPropertiesAsSectretary" target="my.models.userevents.IEventPropertiesBehaviour"/>
+    <UseRelation source="my.models.userevents.SetPropertiesAsSectretary" target="my.models.Appointment" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listener" source="my.NewPrescriptionWindow" target="my.models.userevents.SubFrameModelAddListener" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="SubFrameModelAddListener"/>
+    <HasRelation name="actionRequest" source="my.AccountActionWindow" target="my.models.AccountActionRequest" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="patient" source="my.DispensePrescription" target="my.models.Patient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="my.models.userevents.Listable.ILoadAllBehaviour" target="my.models.userevents.Listable.ListableDirectory" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dateTimeFilter" source="my.SecretaryHomeWindow" target="my.models.userevents.Listable.IFilterByDateTimeBehaviour" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="my.models.userevents.SetPropertiesAsPatient" target="my.models.Appointment" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="loadBehaviour" source="my.SecretaryHomeWindow" target="my.models.userevents.Listable.ILoadAllBehaviour" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.userevents.SetPropertiesAsPatient" target="my.models.userevents.IEventPropertiesBehaviour"/>
+    <UseRelation source="my.models.userevents.Listable.LoadUsers" target="my.models.userevents.Listable.ListableDirectory" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="my.models.Admin" target="my.models.User"/>
+    <UseRelation source="my.models.userevents.SetPropertiesAsDoctor" target="my.models.Appointment" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listener" source="my.AppointmentWindow" target="my.models.userevents.SubFrameCloseListener" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="SubFrameCloseListener"/>
+    <HasRelation name="dateTimeFilter" source="my.CreateAppointmentWindow" target="my.models.userevents.Listable.IFilterByDateTimeBehaviour" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="loadBehaviour" source="my.DoctorHomeWindow" target="my.models.userevents.Listable.ILoadAllBehaviour" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="loadBehaviour" source="my.DispensePrescription" target="my.models.userevents.Listable.ILoadAllBehaviour" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.userevents.Listable.FilterIsToday" target="my.models.userevents.Listable.IFilterByDateTimeBehaviour"/>
+    <UseRelation source="my.AccountActionWindow" target="my.models.userevents.SubFrameCloseListener" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="directory" source="my.NewPrescriptionWindow" target="my.models.userevents.Listable.ListableDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ListableDirectory"/>
+    <UseRelation source="my.NewPrescriptionWindow" target="my.models.userevents.SubFrameModelAddListener" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="directory" source="my.PatientHomeWindow" target="my.models.userevents.Listable.ListableDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ListableDirectory"/>
+    <HasRelation name="listener" source="my.AccountActionWindow" target="my.models.userevents.SubFrameCloseListener" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="SubFrameCloseListener"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.NewPrescriptionWindow" target="my.models.userevents.SubFrameModelAddListener"/>
+    <HasRelation name="WindowPatient" source="my.PatientHomeWindow" target="my.models.Patient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="my.AppointmentWindow" target="my.models.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="filterBehaviour" source="my.RequestAppointmentWindow" target="my.models.userevents.Listable.IFilterByStringBehaviour" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="my.models.Doctor" target="my.models.User"/>
+    <HasRelation name="secretary" source="my.CreateAppointmentWindow" target="my.models.Secretary" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="patient" source="my.Login" target="my.models.Patient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listener" source="my.MedicineWindow" target="my.models.userevents.SubFrameModelAddListener" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="SubFrameModelAddListener"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.User" target="my.models.userevents.Listable.ListableByString"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.userevents.Listable.FilterRemovePrecedingDate" target="my.models.userevents.Listable.IFilterByDateTimeBehaviour"/>
+    <HasRelation name="loadBehaviour" source="my.RequestAppointmentWindow" target="my.models.userevents.Listable.ILoadAllBehaviour" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.SecretaryHomeWindow" target="my.models.userevents.SubFrameCloseListener"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.AppointmentWindow" target="my.models.userevents.SubFrameModelAddListener"/>
+    <UseRelation source="my.models.userevents.IEventPropertiesBehaviour" target="my.models.Appointment" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.userevents.Listable.FilterIsTime" target="my.models.userevents.Listable.IFilterByDateTimeBehaviour"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.userevents.Listable.LoadObjectsFromFile" target="my.models.userevents.Listable.ILoadAllBehaviour"/>
+    <HasRelation name="behaviour" source="my.AppointmentWindow" target="my.models.userevents.IEventPropertiesBehaviour" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listener" source="my.CreateAppointmentWindow" target="my.models.userevents.SubFrameCloseListener" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="SubFrameCloseListener"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.userevents.SetPropertiesAsDoctor" target="my.models.userevents.IEventPropertiesBehaviour"/>
+    <HasRelation name="appointment" source="my.CreateAppointmentWindow" target="my.models.Appointment" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="request" source="my.RequestAppointmentWindow" target="my.models.AppointmentRequest" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="medicine" source="my.MedicineWindow" target="my.models.Medicine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.userevents.Listable.LoadUsers" target="my.models.userevents.Listable.ILoadAllBehaviour"/>
+    <IsRelation name="is" source="my.models.Appointment" target="my.models.UserEvent"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.models.userevents.Listable.FilterIsDate" target="my.models.userevents.Listable.IFilterByDateTimeBehaviour"/>
+    <UseRelation source="my.models.userevents.Listable.LoadObjectsFromFile" target="my.models.userevents.Listable.ListableDirectory" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="loadBehaviour" source="my.CreateAppointmentWindow" target="my.models.userevents.Listable.ILoadAllBehaviour" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="directory" source="my.DispensePrescription" target="my.models.userevents.Listable.ListableDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ListableDirectory"/>
+    <HasRelation name="directory" source="my.DoctorHomeWindow" target="my.models.userevents.Listable.ListableDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ListableDirectory"/>
+    <HasRelation name="WindowAdmin" source="my.AdminHomeWindow" target="my.models.Admin" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="my.DoctorHomeWindow" target="my.models.userevents.SubFrameCloseListener"/>
+    <HasRelation name="dateTimeFilter" source="my.DoctorHomeWindow" target="my.models.userevents.Listable.IFilterByDateTimeBehaviour" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
