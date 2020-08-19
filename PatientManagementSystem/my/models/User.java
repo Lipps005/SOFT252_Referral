@@ -39,7 +39,6 @@ public class User implements Serializable, ListableByString {
           File[] listOfFiles = folder.listFiles();
           if(listOfFiles == null || listOfFiles.length == 0)
           {
-             System.console().printf("No files");
              unique = true;
              break;
           }

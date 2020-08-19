@@ -158,12 +158,14 @@ public class MedicineWindow extends javax.swing.JFrame {
       }
       this.medicine.putOnOrder(OnOrderCheckBox.isSelected());
       this.medicine.saveMedicine();
-      JOptionPane.showMessageDialog(null, "Your changed have been saved", "Saved Changes", JOptionPane.INFORMATION_MESSAGE);
+      JOptionPane.showMessageDialog(null, "Your changes have been saved", "Saved Changes", JOptionPane.INFORMATION_MESSAGE);
       
       if(listener != null)
       {
          listener.onSubFrameNewModel(this.medicine);
       }
+      
+      this.dispose();
    }//GEN-LAST:event_SaveChangesJButtonMouseClicked
 
    /**

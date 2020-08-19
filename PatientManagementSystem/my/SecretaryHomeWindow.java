@@ -64,6 +64,7 @@ public class SecretaryHomeWindow extends javax.swing.JFrame implements SubFrameC
       if(LoggedIn == true)
       {
          this.WindowSecretary = (Secretary) User.loadUser(UID);
+         this.setTitle(this.WindowSecretary.getSearchString());
          this.setVisible(LoggedIn);
          this.directory = new ListableDirectory.ListableTemplateBuilder().AddTopLevelFolder("users").AddFolderUID(this.WindowSecretary.getUID()).AddSubFolder("appointments").Build();
          this.loadBehaviour = new LoadObjectsFromFile();

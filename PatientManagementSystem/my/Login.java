@@ -378,8 +378,22 @@ public class Login extends javax.swing.JFrame {
    }//GEN-LAST:event_Register_Address_JTextAreaCaretUpdate
 
    private void Register_GenderFemale_JRadioBtnStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Register_GenderFemale_JRadioBtnStateChanged
-      Register_Registerbtn_JButton.setEnabled(true);
-      this.patient.setGender(buttonGroup1.getSelection().toString());
+      if(Register_GenderFemale_JRadioBtn.isSelected())
+      {
+         this.patient.setGender("Female");
+         Register_Registerbtn_JButton.setEnabled(true);
+      }
+      else if(Register_GenderMale_JRadioBtn.isSelected())
+      {
+         this.patient.setGender("Male");
+         Register_Registerbtn_JButton.setEnabled(true);
+      }
+      else
+      {
+          Register_Registerbtn_JButton.setEnabled(false);
+      }
+     
+      
    }//GEN-LAST:event_Register_GenderFemale_JRadioBtnStateChanged
 
    private void Register_Registerbtn_JButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Register_Registerbtn_JButtonActionPerformed
@@ -429,47 +443,46 @@ public class Login extends javax.swing.JFrame {
          public void run() {
             new File("users").mkdirs();
             new File("medicines").mkdirs();
-           /*Patient patient = new Patient("P103122");
-           patient.updateAccountStatus(User.AccountStatus.ACTIVE);
-           patient.setName("Samuel Lippett");
-           patient.setPassword("12345");
-          patient.saveUser();
-          Patient patient2 = new Patient("P102222");
-           patient2.updateAccountStatus(User.AccountStatus.ACTIVE);
-           patient2.setName("Xasha Kolowski");
-           patient2.setPassword("12345");
-          patient2.saveUser();
-          Secretary sec = new Secretary("S10201");
-          sec.setName("Mrs Lisa Cartman");
-          sec.updateAccountStatus(User.AccountStatus.ACTIVE);
-          sec.setPassword("12345");
-          sec.saveUser();
-          Doctor doc = new Doctor("D4030");
-          doc.setName("Dr Lisa Cuddy");
-          doc.setPassword("12345");
-          doc.updateAccountStatus(User.AccountStatus.ACTIVE);
-          doc.saveUser();
-         */
-         // Appointment app = new Appointment(LocalDate.parse("2020-09-02", DateTimeFormatter.ISO_LOCAL_DATE), LocalTime.parse("15:20", DateTimeFormatter.ISO_LOCAL_TIME));
-          //app.saveAppointment(doc.getUID());
-          // app.saveAppointment(patient.getUID());
-           //Appointment app2 = new Appointment(LocalDate.parse("2020-08-12", DateTimeFormatter.ISO_LOCAL_DATE), LocalTime.parse("16:20", DateTimeFormatter.ISO_LOCAL_TIME));
-           //app2.saveAppointment(doc.getUID());
-          // app2.saveAppointment(patient.getUID());
-           //Prescription prescription = new Prescription("Two tablets", "Twice Daily", "Three weeks", 84);
-          // prescription.setMedicine("Amoxocillin 60g");
-          // prescription.savePrescription(patient.getUID());
            
-          // Medicine med = new Medicine("Amoxocillin 60g");
-          // med.addStock(100);
-         //  med.saveMedicine();
-           
-         //  Medicine med2 = new Medicine("Amoxocillin");
-         //  med2.addStock(0);
-         //  med2.saveMedicine();
-           
-          // AccountActionRequest request = new AccountActionRequest(patient.getUID(), User.AccountStatus.DELETED);
-         //  request.saveAccountActionRequest();
+//           Medicine med = new Medicine("Tramadol");
+//          med.addStock(100);
+//           med.saveMedicine();
+//           
+//           Medicine med2 = new Medicine("Methadone");
+//           med2.addStock(100);
+//          med2.saveMedicine();
+//          
+//          Medicine med3 = new Medicine("Diamorphine");
+//           med3.addStock(100);
+//          med3.saveMedicine();
+//
+//          Medicine med4 = new Medicine("Buprenorphine");
+//           med4.addStock(100);
+//          med4.saveMedicine();
+//          
+//          Medicine med5 = new Medicine("Fentanyl");
+//          med5.addStock(100);
+//          med5.saveMedicine();
+//          
+//          Medicine med6 = new Medicine("Hydrocortisone");
+//          med6.addStock(100);
+//          med6.saveMedicine();
+//          
+//          Medicine med7 = new Medicine("Oxycodone");
+//          med7.addStock(100);
+//          med7.saveMedicine();
+//          
+//          Medicine med8 = new Medicine("Alfentanil");
+//          med8.addStock(100);
+//          med8.saveMedicine();
+//          
+//          Medicine med9 = new Medicine("Morphine");
+//          med8.addStock(100);
+//          med8.saveMedicine();
+//          
+//         Medicine med10 = new Medicine("Vicodin");
+//          med10.addStock(100);
+//          med10.saveMedicine();
           new Login().setVisible(true);
          }
       });

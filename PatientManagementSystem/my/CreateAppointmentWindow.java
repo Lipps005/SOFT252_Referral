@@ -5,12 +5,15 @@
  */
 package my;
 
+import java.awt.Component;
 import java.io.File;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import my.models.Appointment;
@@ -302,7 +305,8 @@ public class CreateAppointmentWindow extends javax.swing.JFrame {
       
      
       SaveAppointmentJButton.setEnabled(false);
-      if(!ReservedAppointments.isEmpty())
+      DefaultListModel ListModel = (DefaultListModel) TakenAppointmentsJList.getModel();
+      if(!ReservedAppointments.isEmpty())// || ListModel.isEmpty() )
       {
          try
          {
@@ -310,8 +314,10 @@ public class CreateAppointmentWindow extends javax.swing.JFrame {
             LocalDate RequestedDate = LocalDate.parse(NewAppointmentDateJTextField.getText(), DateTimeFormatter.ISO_LOCAL_DATE);
             LocalDateTime AppointmentDate = LocalDateTime.of(RequestedDate, RequestedTime);
 
-            IFilterByDateTimeBehaviour Filter = new FilterIsTime();
+            IFilterByDateTimeBehaviour Filter = new FilterIsDate();
             DefaultListModel model = Filter.filterByDateTime(ReservedAppointments, AppointmentDate);
+            Filter = new FilterIsTime();
+            model = Filter.filterByDateTime(model, AppointmentDate);
             this.TakenAppointmentsJList.setModel(model);
             if(model.isEmpty())
             {
@@ -326,7 +332,6 @@ public class CreateAppointmentWindow extends javax.swing.JFrame {
       }
       else
       {
-         SaveAppointmentJButton.setEnabled(true);
          this.HourTimeJComboBox.setEnabled(true);
          this.MinuteTimeJComboBox.setEnabled(true);
          SaveAppointmentJButton.setEnabled(true);
@@ -390,6 +395,7 @@ public class CreateAppointmentWindow extends javax.swing.JFrame {
          }
          catch(DateTimeParseException e)
          {
+            TakenAppointmentsJList.setModel(ReservedAppointments);
             this.HourTimeJComboBox.setEnabled(false);
             this.MinuteTimeJComboBox.setEnabled(false);
             SaveAppointmentJButton.setEnabled(false);
@@ -461,4 +467,16 @@ public class CreateAppointmentWindow extends javax.swing.JFrame {
    private javax.swing.JLabel jLabel9;
    private javax.swing.JScrollPane jScrollPane1;
    // End of variables declaration//GEN-END:variables
+   
+   public List<Component> getCreateAppointmentComponents()
+   {
+      List<Component> components = new ArrayList<>();
+      components.add(SaveAppointmentJButton);
+      components.add(TakenAppointmentsJList);
+      components.add(NewAppointmentDateJTextField);
+      components.add(HourTimeJComboBox);
+      components.add(MinuteTimeJComboBox);
+      
+      return components;
+   }
 }

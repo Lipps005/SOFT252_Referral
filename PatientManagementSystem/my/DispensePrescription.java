@@ -5,9 +5,12 @@
  */
 package my;
 
+import java.awt.Component;
+import java.awt.event.ActionEvent;
 import java.io.File;
 import javax.swing.DefaultListModel;
-import javax.swing.JFrame;
+import javax.swing.*;
+import java.util.*;
 import javax.swing.JOptionPane;
 import my.models.Medicine;
 import my.models.Patient;
@@ -220,7 +223,7 @@ public class DispensePrescription extends javax.swing.JFrame {
          medicine.dispenseStock(prescription.getRequiredStock());
          medicine.saveMedicine();
          medDirectory = new ListableDirectory.ListableTemplateBuilder().AddTopLevelFolder("users").AddFolderUID(patient.getUID()).AddSubFolder("prescriptions").Build();
-         File file = new File(medDirectory.GetDirectory()+prescription.getUID().toString()+".ser");
+         File file = new File(medDirectory.GetDirectory()+prescription.getUID()+".ser");
          file.delete();
          PendingPrescriptionsModel.removeElement(prescription);
          PendingPrescriptionsJList.setModel(PendingPrescriptionsModel);
@@ -229,6 +232,7 @@ public class DispensePrescription extends javax.swing.JFrame {
 
    }//GEN-LAST:event_DispensePrescriptionJButtonActionPerformed
 
+   
    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
       this.listener.onSubFrameClose(this);
    }//GEN-LAST:event_formWindowClosing
@@ -286,4 +290,14 @@ public class DispensePrescription extends javax.swing.JFrame {
    void SubFrameCloseListener(SubFrameCloseListener listener) {
      this.listener = listener;
    }
+   
+   
+   public List<Component> getDispensePrescriptionComponents()
+   {
+      List<Component> components = new ArrayList<>();
+      components.add(DispensePrescriptionJButton);
+      components.add(PendingPrescriptionsJList);
+      return components;
+   }
+   
 }

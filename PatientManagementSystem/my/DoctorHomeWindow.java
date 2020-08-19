@@ -73,6 +73,7 @@ public class DoctorHomeWindow extends javax.swing.JFrame implements SubFrameClos
       if(LoggedIn == true)
       {
          this.WindowDoctor = (Doctor) User.loadUser(UID);
+         this.setTitle(this.WindowDoctor.getSearchString());
          this.directory = new ListableDirectory.ListableTemplateBuilder()
                  .AddTopLevelFolder("users")
                  .AddFolderUID(UID)
@@ -119,7 +120,7 @@ public class DoctorHomeWindow extends javax.swing.JFrame implements SubFrameClos
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-      AppointmentsTodayJPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Appointments Today"));
+      AppointmentsTodayJPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Upcoming Appointments"));
 
       DoctorApointmentsTodayJList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
       DoctorApointmentsTodayJList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
@@ -308,6 +309,7 @@ public class DoctorHomeWindow extends javax.swing.JFrame implements SubFrameClos
    @Override
    //on appointment window close
    public void onSubFrameClose(JFrame frame) {
+      IFilterByDateTimeBehaviour behaviourDate = new FilterRemovePrecedingDate();
       this.directory = new ListableDirectory.ListableTemplateBuilder()
       .AddTopLevelFolder("users")
       .AddFolderUID(WindowDoctor.getUID())
@@ -315,6 +317,7 @@ public class DoctorHomeWindow extends javax.swing.JFrame implements SubFrameClos
       .Build();
       ILoadAllBehaviour behaviour = new LoadObjectsFromFile();
       this.AppointmentsTodayModel = behaviour.LoadAll(directory);
+      this.AppointmentsTodayModel = behaviourDate.filterByDateTime(AppointmentsTodayModel, LocalDateTime.of(LocalDate.now(), LocalTime.MIN));
       DoctorApointmentsTodayJList.setModel(AppointmentsTodayModel);
       
       frame.dispose();

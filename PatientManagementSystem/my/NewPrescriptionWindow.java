@@ -207,6 +207,8 @@ public class NewPrescriptionWindow extends javax.swing.JFrame implements SubFram
       MedicinePrescriptionAmountJSpinnerStateChanged(null);
       this.listener.onSubFrameNewModel(this.prescription);
       this.prescription = new Prescription();
+      this.SavePrescriptionJButton.setEnabled(false);
+      this.AllMedicinesJList.clearSelection();
    }//GEN-LAST:event_SavePrescriptionJButtonActionPerformed
 
    private void MedicineSearchJTextFieldCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_MedicineSearchJTextFieldCaretUpdate
@@ -218,6 +220,10 @@ public class NewPrescriptionWindow extends javax.swing.JFrame implements SubFram
          if(model.isEmpty())
          {
             this.CreateMedicineJButton.setEnabled(true);
+         }
+         else
+         {
+            this.CreateMedicineJButton.setEnabled(false);
          }
       }
       else

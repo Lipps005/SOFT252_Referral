@@ -60,6 +60,7 @@ public class PatientHomeWindow extends javax.swing.JFrame {
       if(LoggedIn == true)
       {
          this.WindowPatient = (Patient) User.loadUser(UID);
+         this.setTitle(this.WindowPatient.getSearchString());
          this.setVisible(LoggedIn);
          this.directory = new ListableDirectory.ListableTemplateBuilder()
                  .AddTopLevelFolder("users")
@@ -222,10 +223,11 @@ public class PatientHomeWindow extends javax.swing.JFrame {
    private void PastAppointmentsJListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_PastAppointmentsJListValueChanged
      try
      {
-        if(!evt.getValueIsAdjusting())
+        if(!evt.getValueIsAdjusting() && !PastAppointmentsModel.isEmpty() && !PastAppointmentsJList.isSelectionEmpty())
         {
           Appointment historyAppointment = (Appointment)PastAppointmentsModel.getElementAt(PastAppointmentsJList.getSelectedIndex());
           AppointmentWindow appointmentWindow = new AppointmentWindow(historyAppointment, new SetPropertiesAsPatient()); 
+          PastAppointmentsJList.clearSelection();
         }
         
      }
@@ -238,10 +240,11 @@ public class PatientHomeWindow extends javax.swing.JFrame {
    private void UpcomingAppointmentsJListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_UpcomingAppointmentsJListValueChanged
      try
      {
-        if(!evt.getValueIsAdjusting())
+        if(!evt.getValueIsAdjusting() && !UpcomingAppointmentsModel.isEmpty() && !UpcomingAppointmentsJList.isSelectionEmpty() )
         {
         Appointment upcomingAppointment = (Appointment)UpcomingAppointmentsModel.getElementAt(UpcomingAppointmentsJList.getSelectedIndex());
         AppointmentWindow appointmentWindow = new AppointmentWindow(upcomingAppointment, new SetPropertiesAsPatient());
+        UpcomingAppointmentsJList.clearSelection();
         }
      }
      catch(NullPointerException e)
