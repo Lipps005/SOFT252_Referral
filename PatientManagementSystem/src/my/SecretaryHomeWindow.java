@@ -313,7 +313,8 @@ public class SecretaryHomeWindow extends javax.swing.JFrame implements SubFrameC
       {
          if(!evt.getValueIsAdjusting() && ! MedicinesJList.isSelectionEmpty())
          {
-           Medicine selectedMedicine = (Medicine)MedicinesModel.getElementAt(MedicinesJList.getSelectedIndex());
+           DefaultListModel model = (DefaultListModel)MedicinesJList.getModel();
+           Medicine selectedMedicine = (Medicine)model.getElementAt(MedicinesJList.getSelectedIndex());
            MedicineWindow medicineWindow = new MedicineWindow(selectedMedicine);
            MedicinesJList.clearSelection();
          }
